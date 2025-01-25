@@ -1,0 +1,18 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:16 2024
+
+@author: kdkcs
+"""
+-->
+{% extends 'index.html' %}
+
+{% block title %}Project Flow Chart{% endblock %}
+
+{% block content %}
+<section id="flowchart">
+    <h2>Project Flow Chart</h2>
+    <p>The following flowchart outlines the process for detecting bullying content:</p>
+    <img src="{{ url_for('static', filename='flowchart.png') }}" alt="Project Flowchart" />
+</section>
+{% endblock %}

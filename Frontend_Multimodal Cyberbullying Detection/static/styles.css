@@ -1,0 +1,191 @@
+/*# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:28 2024
+
+@author: kdkcs
+"""
+*/
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* 4 Names below the Title */
+header .names {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2em;
+    color: #f3f4f7;
+    font-weight: bold;
+}
+
+header .names span {
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #003f7f;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Intro Image */
+
+.intro-img{
+    display : flex;
+}
+.intro-image img{
+    width : 600px;
+    height : 400px;   
+    justify-content : center;
+}
+
+/* Section Styling */
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #e9f5ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 2em;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 20px;
+}
+
+/* Uploader Section */
+#uploader {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 500px;
+}
+
+/* Buttons */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Card Style for Results */
+#result {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Result Text Styling */
+#result p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#result strong {
+    color: #0056b3;
+}
+
+/* Tables */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+}
+
+table th, table td {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+}
+
+table td {
+    font-size: 1em;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

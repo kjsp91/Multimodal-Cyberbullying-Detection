@@ -1,0 +1,24 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:13 2024
+
+@author: kdkcs
+"""
+-->
+{% extends 'index.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section id="home">
+    <h2>Welcome to the Multimodal Bully Classifier</h2>
+    <p>
+        This tool leverages advanced AI and deep learning techniques to identify bullying content. 
+        Our mission is to create a safer online space by detecting and addressing harmful behavior effectively.
+    </p>
+    <div class="intro-image">
+        <img src="{{ url_for('static', filename='intro_image.jpg') }}" alt="Bully Classifier Overview" />
+    </div>
+</section>
+{% endblock %}
+

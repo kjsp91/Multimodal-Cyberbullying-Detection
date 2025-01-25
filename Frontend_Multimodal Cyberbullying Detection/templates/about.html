@@ -1,0 +1,29 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:24 2024
+
+@author: kdkcs
+"""
+-->
+{% extends 'index.html' %}
+
+{% block title %}About Project{% endblock %}
+
+{% block content %}
+<section id="about">
+    <h2>About the Project</h2>
+    <p>
+        The Multimodal Bully Classifier is an advanced AI-driven project aimed at identifying harmful and bullying content. 
+        By using multimodal deep learning models, the system analyzes both images and text to detect bullying behaviors effectively.
+    </p>
+    <p>
+        Our goal is to contribute to a safer and more inclusive online environment by providing accurate and actionable insights.
+    </p>
+    <ul>
+        <li>Multimodal Analysis: Image and text processing</li>
+        <li>Deep Learning Architecture: VGG16 model , XLM-RoBERTa + BiGRU model</li>
+        <li>High Performance: 74% accuracy</li>
+    </ul>
+</section>
+{% endblock %}
+

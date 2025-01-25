@@ -1,0 +1,44 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:00 2024
+
+@author: kdkcs
+"""
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Multimodal Bully Classifier{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Multimodal Bully Classifier</h1>
+        <!--
+        <div class="names">
+            <span> Bolla Lakshmi Varsha </span>
+            <span> Kalyanam Jahnavi Sai Priya </span>
+            <span> Sunkari Kavya </span>
+            <span> Velchuri Bala Harshitha </span>
+        </div>
+        -->
+    </header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Project</a></li>
+                <li><a href="{{ url_for('prediction_page') }}">Prediction</a></li>
+                <li><a href="{{ url_for('metrics') }}">Metrics</a></li>
+                <li><a href="{{ url_for('flowchart') }}">Flow Chart</a></li>
+            </ul>
+        </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Multimodal Bully Classifier. All rights reserved.</p>
+    </footer>
+</body>
+</html>

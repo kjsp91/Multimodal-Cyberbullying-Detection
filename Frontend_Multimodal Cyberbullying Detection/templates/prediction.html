@@ -1,0 +1,66 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:06 2024
+
+@author: kdkcs
+"""
+-->
+{% extends 'index.html' %}
+
+{% block title %}Prediction{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Upload an Image for Classification</h2>
+    <div id="uploader">
+        <input type="file" id="fileInput" onchange="clearResult()">
+        <button class="button" onclick="submitImage()">Classify</button>
+    </div>
+    <div id="result"></div>
+</section>
+<script>
+    // Function to clear the previous result
+    function clearResult() {
+        document.getElementById('result').innerHTML = ''; // Clear the result section
+    }
+
+    async function submitImage() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        if (!file) {
+            alert('Please upload an image!');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const response = await fetch('{{ url_for("predict") }}', {
+                method: 'POST',
+                body: formData
+            });
+
+            console.log(response);
+
+            if (!response.ok) {
+                throw new Error('Failed to classify the image');
+            }
+
+            const result = await response.json();
+
+            // Display the prediction and extracted text
+            document.getElementById('result').innerHTML = `
+                <p><strong>Image Prediction:</strong> ${result.image_prediction}</p>
+                <!--<p><strong>Extracted Text:</strong> ${result.extracted_text}</p>-->
+                <p><strong>Text Prediction:</strong> ${result.text_prediction}</p>
+            `;
+
+            fileInput.value = ''; // Clear file input for a new upload
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+</script>
+{% endblock %}
+

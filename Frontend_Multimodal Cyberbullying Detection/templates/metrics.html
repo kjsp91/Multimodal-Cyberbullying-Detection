@@ -1,0 +1,44 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 24 20:19:08 2024
+
+@author: kdkcs
+"""
+-->
+{% extends 'index.html' %}
+
+{% block title %}Model Evaluation Metrics{% endblock %}
+
+{% block content %}
+<section id="metrics">
+    <h2>Model Evaluation Metrics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Model</th>
+                <th>Accuracy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Image</td>
+                <td>VGG16</td>
+                <td>64.74%</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>XLM-RoBERTa + BiGRU</td>
+                <td>64.78%</td>
+            </tr>
+            <tr>
+                <td>Multimodal</td>
+                <td>VGG16 + XLM-RoBERTa + BiGRU</td>
+                <td>74%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>These metrics indicate the robustness and reliability of our model in detecting bullying content.</p>
+</section>
+{% endblock %}
+
